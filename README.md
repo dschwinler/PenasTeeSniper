@@ -2,7 +2,7 @@
 
 ### **📌 PenasTeeSniper – Automated Tee Time Booking Bot**  
 
-**PenasTeeSniper** is a Python-based **Selenium bot** that automates the process of booking tee times at **The Pines CC** using the **ForeUp** reservation system. The bot logs in, selects the last available day, chooses a **12:00 PM** tee time, configures the reservation for **4 players with a cart**, and confirms the booking.  
+**PenasTeeSniper** is a Python-based **Selenium bot** that automates the process of booking tee times at **The Penas** using the **ForeUp** reservation system. The bot logs in, selects the last available day, chooses a **12:00 PM** tee time, configures the reservation for **4 players with a cart**, and confirms the booking.  
 
 ---
 

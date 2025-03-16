@@ -1,56 +1,75 @@
-# PenasTeeSniper
+# Penas Tee Sniper
 
-### **📌 PenasTeeSniper – Automated Tee Time Booking Bot**  
+## Overview
 
-**PenasTeeSniper** is a Python-based **Selenium bot** that automates the process of booking tee times at **The Penas** using the **ForeUp** reservation system. The bot logs in, selects the last available day before a disabled date, chooses a **12:00 PM** tee time, configures the reservation for **4 players with a cart**, and confirms the booking.  
+Penas Tee Sniper is an automated bot that books tee times. The script is designed to run every Friday at 00:00 and automatically book the 12:00 PM and 12:08 PM tee times for a game scheduled 14 days in advance.
 
----
+## Features
 
-### **⚡ Features**  
-✅ **Automated Login** – Securely logs into the ForeUp booking system  
-✅ **Date Selection** – Selects the **last available day** before a disabled date  
-✅ **Tee Time Booking** – Finds and reserves the **12:00 PM** time slot  
-✅ **Custom Options** – Configures for **18 holes, 4 players, and a cart**  
-✅ **Hands-Free Automation** – Runs without manual input  
+- **Automated Login**: The bot logs into the ForeUP booking system using provided credentials.
+- **Member Access**: Navigates to the member booking section.
+- **Date Selection**: Selects the latest available date before any disabled dates in the calendar.
+- **Tee Time Booking**:
+  - Finds and reserves the 12:00 PM tee time.
+  - Selects 18 holes, 4 players, and a golf cart.
+  - Confirms and books the tee time.
+  - Waits a few seconds and navigates back to the tee times page.
+  - Repeats the process for the 12:08 PM tee time.
+- **Automated Navigation**: After booking, it returns to the main tee times page and repeats the process for the next scheduled time.
+- **Error Handling**: Implements robust error handling to prevent script failure due to delays or minor page inconsistencies.
 
----
+## Technologies Used
 
-### **🛠️ Technologies & Dependencies**  
-- **Python 3.x** 🐍  
-- **Selenium** – Automates web interactions  
-- **ChromeDriver** – Controls the browser for Selenium  
-- **WebDriverWait** – Ensures elements are ready before interacting  
+- **Python**: Main programming language.
+- **Selenium**: Used for web automation.
+- **ChromeDriver**: Enables automated interactions with the ForeUP website.
+- **Automator + Calendar** (Mac)\*\*: Scheduled to run automatically on macOS without needing a cloud server.
 
-📌 **Install Dependencies:**  
-```bash
-pip install selenium
+## Installation & Setup
+
+### Prerequisites
+
+- Install Python 3.
+- Install Selenium:
+  ```sh
+  pip install selenium
+  ```
+- Download and install ChromeDriver:\
+  [ChromeDriver Downloads](https://sites.google.com/chromium.org/driver/)
+
+### Running the Script Manually
+
+Run the script using:
+
+```sh
+python3 penas_tee_sniper.py
 ```
 
----
+### Automating Execution (MacOS)
 
-### **🚀 How to Run**  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/PenasTeeSniper.git
+1. Open **Automator**.
+2. Create a new **Calendar Alarm**.
+3. Add **Run Shell Script** action and input:
+   ```sh
+   /usr/bin/python3 /path/to/penas_tee_sniper.py
    ```
-2. Install dependencies:  
-   ```bash
-   pip install selenium
-   ```
-3. Run the bot:  
-   ```bash
-   python3 foreup_booking_bot.py
-   ```
+4. Save and schedule it in **Calendar** to run every Friday at 00:00.
 
----
+## Configuration
 
-### **🔧 Future Improvements**
-- **Auto-run scheduling** – Book tee times on a set schedule  
-- **Dynamic time selection** – Choose other preferred time slots  
-- **Multi-player support** – Book for different player groups  
+Update the following variables with your login credentials before running:
 
----
+```python
+USERNAME = "your_email@example.com"
+PASSWORD = "your_secure_password"
+```
 
-💬 **Feel free to contribute or suggest improvements!** 🚀⛳  
+## Notes
 
----
+- Ensure your Mac does not go to sleep during execution.
+- The script must be updated if ForeUP changes its website structure.
+
+## License
+
+This project is for personal use only. Unauthorized use on other platforms is not recommended.
+

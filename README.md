@@ -15,8 +15,7 @@ Penas Tee Sniper is an automated bot that secures tee times. It allows you to sc
   - Confirms and books the tee time.
   - Waits a few seconds and navigates back to the tee times page.
   - Repeats the process for additonal designated tee times. 
-- **Automated Navigation**: After booking, it returns to the main tee times page and repeats the process for the next scheduled time.
-- **Error Handling**: Implements robust error handling to prevent script failure due to delays or minor page inconsistencies.
+- **Error Handling**: Implements error handling to prevent script failure due to delays or minor page inconsistencies.
 
 ## Technologies Used
 
@@ -53,6 +52,19 @@ python3 penas_tee_sniper.py
    ```
 2. Create a new **Calendar Event** and add an alert.
 3. Alert > Custom > Open file > Other > /path/to/penas_tee_sniper.py
+4. Optional: To record the start and end time, calculate the duration, and enable logging, use:
+   
+  ```sh
+  echo "[$(date)] Script started" >> /path/to/automator_log.txt
+  START_TIME=$(date +%s)  # Capture the start time
+
+  /usr/bin/python3 /path/to/penas_tee_sniper.py >> /path/to/automator_log.txt 2>&1
+
+  END_TIME=$(date +%s)  # Capture the end time
+  DURATION=$((END_TIME - START_TIME))  # Calculate duration
+
+  echo "[$(date)] Script finished (Duration: ${DURATION} seconds)" >> /path/to/automator_log.txt
+  ```
    
 ## Configuration
 

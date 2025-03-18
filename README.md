@@ -2,7 +2,7 @@
 
 ## Overview
 
-Penas Tee Sniper is an automated bot that books tee times. The script is designed to run every Friday at 00:00 and automatically book the 12:00 PM and 12:08 PM tee times for a game scheduled 14 days in advance.
+Penas Tee Sniper is an automated bot that books tee times. The script is designed to run whenver you want and book any tee times you want, scheduled 14 days in advance.
 
 ## Features
 
@@ -10,11 +10,11 @@ Penas Tee Sniper is an automated bot that books tee times. The script is designe
 - **Member Access**: Navigates to the member booking section.
 - **Date Selection**: Selects the latest available date before any disabled dates in the calendar.
 - **Tee Time Booking**:
-  - Finds and reserves the 12:00 PM tee time.
+  - Finds and reserves the designated tee times.
   - Selects 18 holes, 4 players, and a golf cart.
   - Confirms and books the tee time.
   - Waits a few seconds and navigates back to the tee times page.
-  - Repeats the process for the 12:08 PM tee time.
+  - Repeats the process for additonal designated tee times. 
 - **Automated Navigation**: After booking, it returns to the main tee times page and repeats the process for the next scheduled time.
 - **Error Handling**: Implements robust error handling to prevent script failure due to delays or minor page inconsistencies.
 
@@ -53,7 +53,7 @@ python3 penas_tee_sniper.py
    ```sh
    /usr/bin/python3 /path/to/penas_tee_sniper.py
    ```
-4. Save and schedule it in **Calendar** to run every Friday at 00:00.
+4. Save and schedule it in **Calendar**. 
 
 ## Configuration
 

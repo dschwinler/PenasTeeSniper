@@ -57,7 +57,7 @@ python3 penas_tee_sniper.py
 
 ## Configuration
 
-Update the following variables with your login credentials and URL of website before running:
+Update the following variables with your login credentials and URL before running:
 
 ```python
 USERNAME = "your_email@example.com"
@@ -77,7 +77,7 @@ book_tee_time("12:00pm")
 book_tee_time("12:08pm")
 ```
 
-Choose how far in advance you want to book:
+Choose how far in advance you want to book by updating ```python available_days[-1]```
 
 ```python
 # ✅ Find all available (clickable) days - these will have just the 'day' class without 'disabled'

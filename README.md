@@ -76,7 +76,7 @@ book_tee_time("12:00pm")
 book_tee_time("12:08pm")
 ```
 
-Choose how far in advance you want to book by updating ```python available_days[-1] ```
+Choose how far in advance you want to book by updating this snippet:
 
 ```python
 # ✅ Find all available (clickable) days - these will have just the 'day' class without 'disabled'

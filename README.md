@@ -2,7 +2,7 @@
 
 ## Overview
 
-Penas Tee Sniper is an automated bot that secures tee times effortlessly. It allows you to schedule and book desired tee times in advance, running whenever you choose.
+Penas Tee Sniper is an automated bot that secures tee times. It allows you to schedule and book desired tee times in advance, running whenever you choose.
 
 ## Features
 
@@ -47,14 +47,13 @@ python3 penas_tee_sniper.py
 
 ### Automating Execution (MacOS)
 
-1. Open **Automator**.
-2. Create a new **Calendar Alarm**.
-3. Add **Run Shell Script** action and input:
+1. Open **Automator** > Applications > Run Shell Script
    ```sh
    /usr/bin/python3 /path/to/penas_tee_sniper.py
    ```
-4. Save and schedule it in **Calendar**. 
-
+2. Create a new **Calendar Event** and add an alert.
+3. Alert > Custom > Open file > Other > /path/to/penas_tee_sniper.py
+   
 ## Configuration
 
 Update the following variables with your login credentials and URL before running:
@@ -77,7 +76,7 @@ book_tee_time("12:00pm")
 book_tee_time("12:08pm")
 ```
 
-Choose how far in advance you want to book by updating ```python available_days[-1]```
+Choose how far in advance you want to book by updating ```python available_days[-1] ```
 
 ```python
 # ✅ Find all available (clickable) days - these will have just the 'day' class without 'disabled'

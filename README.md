@@ -2,7 +2,7 @@
 
 ## Overview
 
-Penas Tee Sniper is an automated bot that books tee times. The script is designed to run whenver you want and book any tee times you want, scheduled 14 days in advance.
+Penas Tee Sniper is an automated bot that secures tee times effortlessly. It allows you to schedule and book desired tee times in advance, running whenever you choose.
 
 ## Features
 
@@ -64,9 +64,13 @@ USERNAME = "your_email@example.com"
 PASSWORD = "your_secure_password"
 ```
 
+```python
+driver.get("https://YOUR-UR.COM")
+```
+
 ## Notes
 
-- Ensure your Mac does not go to sleep during execution.
+- Ensure your Mac does not go to sleep during execution. System Preferences > Battery > Schedule.
 - The script must be updated if ForeUP changes its website structure.
 
 ## License

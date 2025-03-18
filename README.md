@@ -57,7 +57,7 @@ python3 penas_tee_sniper.py
 
 ## Configuration
 
-Update the following variables with your login credentials before running:
+Update the following variables with your login credentials and URL of website before running:
 
 ```python
 USERNAME = "your_email@example.com"
@@ -65,7 +65,31 @@ PASSWORD = "your_secure_password"
 ```
 
 ```python
-driver.get("https://YOUR-UR.COM")
+driver.get("https://YOUR-URL.COM")
+```
+Select which tee times you would like to book:
+
+```python
+# Book 12:00 PM
+book_tee_time("12:00pm")
+
+# Book 12:08 PM
+book_tee_time("12:08pm")
+```
+
+Choose how far in advance you want to book:
+
+```python
+# ✅ Find all available (clickable) days - these will have just the 'day' class without 'disabled'
+    available_days = date_picker.find_elements(By.XPATH, "//td[contains(@class, 'day') and not(contains(@class, 'disabled'))]")
+
+    if available_days:
+        # Get the last clickable day
+        last_available_day = available_days[-1]
+        print(f"✅ Selecting the last available day: {last_available_day.text}")
+        driver.execute_script("arguments[0].click();", last_available_day)
+    else:
+        print("❌ No available days found in the calendar!")
 ```
 
 ## Notes
